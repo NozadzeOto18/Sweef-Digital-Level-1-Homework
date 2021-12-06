@@ -11,7 +11,8 @@ class PalindromeActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         init()
     }
-
+    
+    //We have EditText layout named inputET
     private fun init() {
         if (inputET.text.toString().isNotEmpty()) {
             if (isPalindrome(inputET.text.toString())) {
