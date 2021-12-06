@@ -13,20 +13,20 @@ class PalindromeActivity : AppCompatActivity() {
     private fun init() {
         minSplit(95)
         //prints max values of each coins
-        println("50 - " + coin50 + "20 - " + coin20 + "10 - " + coin10 + "5 - " + coin5 + "1 - "+ coin1)
+        println(" coin 50 - " + coin50.toString() + ", coin 20 - " + coin20.toString() + ", coin 10 - " + coin10.toString() + ", coin 5 - " + coin5.toString() + ", coin 1 - " + coin1.toString())
     }
 
     private fun minSplit(amount: Int): Int {
         var remain = amount
-        coin50 = remain/50 - remain%50
-        remain = remain%50
-        coin20 = remain/20 - remain%20
-        remain = remain%20
-        coin10 = remain/10 - remain%10
-        remain = remain%10
-        coin5 = remain/5 - remain%5
-        remain = remain%5
-        coin1 = remain/1 - remain%1
+        coin50 = (remain - remain % 50) / 50
+        remain = remain % 50
+        coin20 = (remain - remain % 20) / 20
+        remain = remain % 20
+        coin10 = (remain - remain % 10) / 10
+        remain = remain % 10
+        coin5 = (remain - remain % 50) / 5
+        remain = remain % 5
+        coin1 = (remain - remain % 10) / 1
         //returns max values of coins
         return (coin50 + coin20 + coin10 + coin5 + coin1)
     }
