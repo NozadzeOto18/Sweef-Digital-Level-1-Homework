@@ -1,4 +1,4 @@
-private fun init() {
+    private fun init() {
         // number of floors ( n )
         var floor = 2
         countVariants(floor)
