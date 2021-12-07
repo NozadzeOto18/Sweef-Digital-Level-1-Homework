@@ -1,4 +1,4 @@
-private fun init() {
+    private fun init() {
         var text = "(())()"
         if (isProperly(text)) {
             println("brackes are correctly written")
